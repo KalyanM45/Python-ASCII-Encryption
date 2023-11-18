@@ -65,8 +65,3 @@ Now keep explore it by testing it with various input text to see how you can twi
 Give it a star 
 --------------
 Did you find this information useful, then give it a star 
-
-
-Credits
------------
-All the credits to [kalebu](github.com/kalebu)
