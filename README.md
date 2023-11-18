@@ -1,67 +1,67 @@
-# ascii-encryption-python
-Beginner guide to ascii based encryption implemented in Python 
+# Python ASCII Encryption
 
-Getting started 
-----------------
-This is just a simple encryption algorithms that can be cool when it comes to understanding and exploring how does encryption works, but not seriously used to handle security on real life circumstances 
+This Python script demonstrates a simple ASCII-based encryption algorithm. It converts alphabetic characters to their ASCII numerical values, applies a secret number for encryption, and allows decryption using the same secret number.
 
-To get started with repo you might have to clone or download the repository just as shown below;
+## Getting Started
 
-```bash
-
-git clone https://github.com/Kalebu/ascii-encryption-python
-
-```
-
-Basics
-----------------
-If you're new to ascii encryption, this simple involving converting the alphabetics to their ascii numerical value and using a secret number to add or substract from their real value and then turning back into characters as encrypted one.
-
-For instance 
+To get started, clone or download the repository:
 
 ```bash
-
-Encrypting 
-
-a - > 97 -> 97 (+|-) secret_number -> new characer
-
-Lets say our secret number is 5
-
-a -> 97 -> 97 + 5 -> f
-
-Decrypting 
-
-To descrypt we need to know the secret number otherwise we wont be able to do it so
-
-f -> 102 -> 102 (+|-) secret number -> decrypted character
-
-Since we know the serect number is 5
-
-f -> 102 -> 102 - 5 > a 
-
+git clone https://github.com/KalyanMurapaka45/Python-ASCII-Encryption
+cd Python-ASCII-Encryption
 ```
 
-In this repository I have implemented two simple function just do that, which take a textual input of any size and then encrypt it using ascii value based on your secret number and then it will return back encrypted text.
+## Basics
 
-Samewise to decryption, you are going to specify the secret number and then it will recieve your encrypted text input and then render to you decrypted text output 
+ASCII encryption involves converting alphabetic characters to ASCII numerical values and using a secret number for encryption and decryption.
 
+- Encrypting:
+  ```
+  a -> 97 -> 97 (+|-) secret_number -> new character
+  ```
+  Let's say our secret number is 5:
+  ```
+  a -> 97 -> 97 + 5 -> f
+  ```
 
-Demo 
-------------
+- Decrypting:
+  ```
+  f -> 102 -> 102 (+|-) secret_number -> decrypted character
+  ```
+  Since we know the secret number is 5:
+  ```
+  f -> 102 -> 102 - 5 > a
+  ```
+
+## Implementation
+
+The repository includes two functions, `encrypt` and `decrypt`, which perform ASCII-based encryption and decryption. They take a text input and a secret number for encryption and return the encrypted text. Decryption requires specifying the secret number and the encrypted text.
+
+## Demo
 
 ```python
->>> from algorithms import encrypt , decrypt
->>> army_text = "Throw the missiles at 9pm"
->>> encrypt(army_text, key=10)
-'^r|y\x81*~ro*ws}}svo}*k~*Czw'
->>> decrypt('^r|y\x81*~ro*ws}}svo}*k~*Czw', key=10)
-'Throw the missiles at 9pm'
+from algorithms import encrypt, decrypt
+
+army_text = "Throw the missiles at 9pm"
+print(encrypt(army_text, key=10))
+# Output: '^r|y\x81*~ro*ws}}svo}*k~*Czw'
+
+print(decrypt('^r|y\x81*~ro*ws}}svo}*k~*Czw', key=10))
+# Output: 'Throw the missiles at 9pm'
 ```
 
-Explore it 
------------
-Now keep explore it by testing it with various input text to see how you can twist it to your own use
+## Explore
 
-Give it a star 
---------------
-Did you find this information useful, then give it a star 
+Explore the script's functionality by testing it with various input texts to understand how it can be adapted to different use cases.
+
+## Contributions
+
+Contributions are welcome! Feel free to submit issues or pull requests.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+Special thanks to contributors and developers who have contributed to this project.
